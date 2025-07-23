@@ -16,7 +16,8 @@
     "next": "15.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^9.2.0"
+    "react-redux": "^9.2.0",
+    "zod": "^4.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
