@@ -1,6 +1,7 @@
 import React from 'react';
 import { EyeIcon, ShareIcon } from '@heroicons/react/24/outline';
 import { ArrowLeftIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 
 interface ProfileHeaderProps {
   avatarUrl: string;
@@ -13,8 +14,10 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ avatarUrl, name, nickname
   return (
     <div className="flex flex-col items-center gap-2 py-4 relative" style={{ background: '#E5E5E5' }}>
       <div className="flex items-center gap-4 relative w-full justify-center">
-        {/* Left arrow icon absolutely positioned, higher and thicker */}
-        <ArrowLeftIcon className="w-8 h-8 text-[#B0B0B0] absolute left-0 top-6" />
+        {/* Left arrow icon absolutely positioned, higher and thicker, now a link */}
+        <Link href="/" className="absolute left-0 top-6 cursor-pointer">
+          <ArrowLeftIcon className="w-8 h-8 text-[#B0B0B0]" />
+        </Link>
         {/* Avatar with yellow background and green P badge */}
         <div className="relative flex items-center justify-center">
           <div className="w-36 h-36 rounded-full bg-[#FFE600] flex items-center justify-center relative">
